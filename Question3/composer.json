@@ -1,5 +1,5 @@
 {
-    "name": "switchtel/question1",
+    "name": "switchtel/question3",
     "type": "library",
     "authors": [
         {
@@ -8,7 +8,6 @@
         }
     ],
     "require": {
-        "php-di/php-di": "^6.3",
-        "ext-pdo": "*"
+        "fakerphp/faker": "^1.14"
     }
 }

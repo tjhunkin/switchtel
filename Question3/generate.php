@@ -36,3 +36,5 @@ catch (PDOException $e)
 // select * from prefix_map where prefix = '0899976098'; 1.06 seconds
 // ALTER TABLE `prefix_map` ADD INDEX `prefix_map_prefix` (`prefix`);
 // select * from prefix_map where prefix = '0899976098'; 1 row in set (0.00 sec)
+// ALTER TABLE prefix_map ADD FULLTEXT INDEX prefix_map_fulltext (prefix, destination)
+// SELECT * FROM prefix_map WHERE MATCH(prefix, destination) AGAINST('0899977*' IN BOOLEAN MODE); 1 row in set (0.00 sec)

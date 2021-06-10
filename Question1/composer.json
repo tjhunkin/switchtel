@@ -1,0 +1,13 @@
+{
+    "name": "switchtel/question1",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Thomas Hunkin",
+            "email": "thomas@hunkin.co.za"
+        }
+    ],
+    "require": {
+        "php-di/php-di": "^6.3"
+    }
+}

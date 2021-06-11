@@ -23,12 +23,13 @@ try
     {
         // question 3.1
         $result = getDestination($pdo,'0111234567');
+        echo "\$result:$result".PHP_EOL;
 
         // question 3.2
         try
         {
             // update a single number
-            setDestination($pdo,null,null,'new destination','0101001816');
+            setDestination($pdo,null,null,'yet another destination','0111234567');
 
             // update a block of numbers
             setDestination($pdo,'0111534560','0111534569','changed destination');

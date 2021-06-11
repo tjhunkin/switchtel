@@ -7,8 +7,6 @@ require ('prefixes.php');
 
 $faker = Faker\Factory::create();
 
-$dsn = "mysql:host=$host;dbname=$db;charset=UTF8";
-
 try
 {
     $pdo = new PDO($dsn, $user, $password);

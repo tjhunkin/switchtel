@@ -34,7 +34,7 @@ try
             setDestination($pdo,null,null,'yet another destination','0111234567');
 
             // update a block of numbers
-            setDestination($pdo,'0111534560','0111534569','changed destination');
+            setDestination($pdo,'0890000000','0899999999','changed destination again massive');
         }
         catch (Exception $e)
         {
@@ -146,6 +146,11 @@ function setDestination(PDO $pdo,?string $startBlock,?string $endBlock,string $d
         }
 
         $range = generateDestinationRange($startBlock,$endBlock);
+
+        if (count($range) > 100)
+        {
+            throw new \Exception('Block range cannot exceed 100 numbers');
+        }
 
         if (count($range) > 0)
         {

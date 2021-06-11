@@ -24,7 +24,7 @@ try
     if ($pdo)
     {
         // question 3.1
-        $result = getDestination($pdo,'0111234567');
+        $result = getDestination($pdo,'011');
         echo "\$result:$result".PHP_EOL;
 
         // question 3.2
@@ -124,11 +124,6 @@ function canDestinationChange(PDO $pdo,$range) : bool
  */
 function setDestination(PDO $pdo,?string $startBlock,?string $endBlock,string $destination,string $telephoneNumber = null) : void
 {
-    if (strlen($destination) < 3)
-    {
-        throw new \Exception('Destination needs to be at least 3 numbers');
-    }
-
     // if it's a single number to update
     if (strlen($telephoneNumber) > 0)
     {

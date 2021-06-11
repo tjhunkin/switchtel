@@ -1,6 +1,8 @@
 <?php
 
 /**
+ * NOTE: I generated 2.5 million records for testing using generate.php.
+ * I manually added ranges for block update testing
  * NOTE: prefix was created as an index
  * ALTER TABLE `prefix_map` ADD INDEX `prefix_map_prefix` (`prefix`);
  * Without an Index: select * from prefix_map where prefix = '0899976098'; 1.06 seconds
@@ -114,8 +116,8 @@ function canDestinationChange(PDO $pdo,$range) : bool
  * To update a block of telephone numbers: setDestination($pdo,'0111234560','0111234569','new destination');
  *
  * @param PDO $pdo
- * @param string|null $startBlock e.g. 0111234560
- * @param string|null $endBlock e.g. 0111234569
+ * @param string|null $startBlock e.g. 0111234560 or 0111234500
+ * @param string|null $endBlock e.g. 0111234569 or 0111234599
  * @param string $destination
  * @param string|null $telephoneNumber
  * @throws Exception
